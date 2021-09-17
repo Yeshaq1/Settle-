@@ -1,0 +1,81 @@
+<% layout(layout_directory+'/mainLayout') -%>
+<!-- begin:: Subheader -->
+<div class="kt-subheader   kt-grid__item" id="kt_subheader">
+    <div class="kt-subheader__main">
+        <h3 class="kt-subheader__title"> <%= page_title %> </h3>
+        <span class="kt-subheader__separator kt-subheader__separator--v"></span>
+        <!-- <div class="kt-subheader__breadcrumbs">
+            <a href="<%= generateUrl('user.dashboard') %>" class="kt-subheader__breadcrumbs-home">Dashboard</a>
+            <span class="kt-subheader__breadcrumbs-separator"></span>
+            <span class="kt-subheader__breadcrumbs-link kt-subheader__breadcrumbs-link--active"><%= page_title %></span>
+        </div> -->
+    </div>
+</div>
+<!-- end:: Subheader -->
+
+<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="kt-portlet">
+                <form class="kt-form kt-form--label-right" action="<%= generateUrl('admin.updateProfile')%>" method="POST" id="frmMyProfile" enctype="multipart/form-data">
+                    <div class="kt-portlet__body">
+                        <div class="form-group row">
+                            <div class="col-lg-6">
+                                <label>First Name:</label>
+                                <input type="text" name="first_name" id="full_name" class="form-control"
+                                    pattern="^[a-zA-Z\s]+$" placeholder="Enter first name"
+                                    value="<%= response.first_name %>">
+                            </div>
+
+                            <div class="col-lg-6">
+                                <label>Last Name:</label>
+                                <input type="text" name="last_name" id="last_name" class="form-control"
+                                    pattern="^[a-zA-Z\s]+$" placeholder="Enter last name"
+                                    value="<%= response.last_name %>">
+                            </div>
+                           
+                        </div>
+
+                        <div class="form-group row">
+                            <!-- <div class="col-lg-6">
+                                <label class="">Phone Number:</label>
+                                <input type="text" name="phone" id="phone" class="form-control" placeholder="Enter phone number" value="<%= response.phone %>">
+                            </div> -->
+                            <div class="col-lg-12">
+                                <label class="">Email:</label>
+                                <input type="text" name="email" id="email" class="form-control" placeholder="Enter email" value="<%= response.email %>" readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+							<div class="col-lg-6">
+								<label for="email" class="control-label">Profile Image</label>
+								<div class="controls">
+									<input type="file" name="profile_image" id="profile_image" class="form-control">
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<%if(response.profile_image != ''){%>
+									<img src="/uploads/user/<%=response.profile_image%>" alt="" height="100px" width="100px">
+									<%}else{%>
+										<img src="/uploads/user/default_no_image" alt="">
+									<%}%>
+							</div>
+						</div>
+                    </div>
+                    <div class="kt-portlet__foot">
+                        <div class="kt-form__actions">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <input type="hidden" name="id" value="<%= response._id %>">
+                                    <button type="submit" class="btn btn-primary">Save</button>
+                                    <a href="<%= generateUrl('user.dashboard') %>" class="btn btn-secondary">Cancel</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+a[title="JavaScript charts"] {
+    display: none !important;
+}
+.amcharts-center-div{
+    padding-left: 0px !important;
+}
+.datepicker.dropdown-menu {
+    z-index: 9999 !important;
+}
+/* This is for rating */
+.rating[data-rating="0"] .rating__item:nth-child(-n + 0):after, .rating[data-rating="0.5"] .rating__item:nth-child(-n + 0):after, .rating[data-rating="1"] .rating__item:nth-child(-n + 1):after, .rating[data-rating="1.5"] .rating__item:nth-child(-n + 1):after, .rating[data-rating="2"] .rating__item:nth-child(-n + 2):after, .rating[data-rating="2.5"] .rating__item:nth-child(-n + 2):after, .rating[data-rating="3"] .rating__item:nth-child(-n + 3):after, .rating[data-rating="3.5"] .rating__item:nth-child(-n + 3):after, .rating[data-rating="4"] .rating__item:nth-child(-n + 4):after, .rating[data-rating="4.5"] .rating__item:nth-child(-n + 4):after, .rating[data-rating="5"] .rating__item:nth-child(-n + 5):after, .rating[data-rating="5.5"] .rating__item:nth-child(-n + 5):after {
+    content: "\f005";
+  }
+  .rating[data-rating="0.5"] .rating__item:nth-child(1):after, .rating[data-rating="1.5"] .rating__item:nth-child(2):after, .rating[data-rating="2.5"] .rating__item:nth-child(3):after, .rating[data-rating="3.5"] .rating__item:nth-child(4):after, .rating[data-rating="4.5"] .rating__item:nth-child(5):after, .rating[data-rating="5.5"] .rating__item:nth-child(6):after {
+    content: "\f123";
+  }
+  .rating {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color:#FCD208;
+  }
+  .rating__item {
+    font-size: 16px;
+    display: block;
+    font-family: "FontAwesome";
+    font-weight: 400;
+  }
+  .rating__item::after {
+    content: '\f006 ';
+  }
+  
+/* This is for rating */

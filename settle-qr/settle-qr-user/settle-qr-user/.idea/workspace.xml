@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8a1d9512-86b8-446a-b66b-d1020836e6f2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modals-Component/DefaultModal.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages-Component/GuestPayComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages-Component/GuestPayComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Share-Component/HeaderComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Share-Component/HeaderComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/document.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/document.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1hv0fS8Wpaks89fC4NHuL0wcDz7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8a1d9512-86b8-446a-b66b-d1020836e6f2" name="Default Changelist" comment="" />
+      <created>1600876362757</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600876362757</updated>
+    </task>
+    <servers />
+  </component>
+</project>

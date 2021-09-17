@@ -1,0 +1,72 @@
+<% layout(layout_directory+'/mainLayout') -%>
+
+    <div class="kt-subheader   kt-grid__item" id="kt_subheader">
+        <div class="kt-subheader__main">
+            <h3 class="kt-subheader__title">
+                <%= page_title %>
+            </h3>
+            <span class="kt-subheader__separator kt-subheader__separator--v"></span>
+            <div class="kt-subheader__breadcrumbs">
+                <!-- <a href="<%= generateUrl('user.dashboard') %>" class="kt-subheader__breadcrumbs-home">Dashboard</a>
+                <span class="kt-subheader__breadcrumbs-separator"></span>
+                <span class="kt-subheader__breadcrumbs-link kt-subheader__breadcrumbs-link--active">
+                    <%= page_title %>
+                </span> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="kt-portlet">
+                    <form class="kt-form kt-form--label-right" id="frmAddRestaurant" action="<%= generateUrl('restaurant.insert') %>" method="POST"
+                        enctype='multipart/form-data'>
+                        <div class="kt-portlet__body">
+                            <div class="form-group row">
+                                <div class="col-lg-6">
+                                    <label>Restaurant Name</label>
+                                    <input type="text" name="restaurant_name"  id="restaurant_name" class="form-control" data-validation-required-message="This field is required">
+                                </div>
+                                <div class="col-lg-6">
+                                    <label>Restaurant Email</label>
+                                    <input type="text" name="email"  id="email" class="form-control" data-validation-required-message="This field is required">
+                                    
+                                </div>
+                            </div>
+                            <div class="form-group row"> 	
+							<div class="col-lg-6">
+								<label for="password" class="control-label">Password</label>
+								<div class="controls">
+									<input id="password" name="password" type="password" autocomplete="off" placeholder="Enter Password" class="form-control required" value="" aria-invalid="true" />
+								</div>
+							</div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-6">
+                                    <label>Restaurant photos:</label>
+                                    <input type="file" name="restaurant_photos" id="restaurant_photos" multiple class="form-control imagepicker" accept="image/*">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-6">
+                                    <label>Restaurant menu upload (PDF):</label>
+                                    <input type="file" name="restaurant_menu_pdf" id="restaurant_menu_pdf"  class="form-control imagepicker" accept="application/pdf, application/vnd.ms-excel">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kt-portlet__foot">
+                            <div class="kt-form__actions">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <button type="submit" class="btn btn-primary">Save</button>
+                                        <a href="<%= generateUrl('restaurant.list') %>" class="btn btn-secondary">Cancel</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

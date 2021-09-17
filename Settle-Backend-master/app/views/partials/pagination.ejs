@@ -1,0 +1,62 @@
+<% if (response.pages > 1) { %>
+    <div class="row">
+        <div class="col-12 text-right">
+            <div class="pagination-panel clearfix">
+                <ul class="pagination pagination-sm man pull-right">
+                    <% if (response.current == 1) { %>
+                        <li class="disabled">
+                            <a>
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        </li>
+                        <% } else { %>
+                            <li>
+                                <a href="?page=1<%=response.search_param%>">
+                                    <i class="fa fa-angle-left"></i>
+                                </a>
+                            </li>
+                            <% } %>
+                                <% var i = (Number(response.current) > 5 ? Number(response.current) - 4 : 1) %>
+                                    <% if (i !== 1) { %>
+                                        <li class="disabled">
+                                            <a>...</a>
+                                        </li>
+                                        <% } %>
+                                            <% for (; i <= (Number(response.current) + 4) && i <= response.pages; i++) { %>
+                                                <% if (i == response.current) { %>
+                                                    <li class="active">
+                                                        <a>
+                                                            <%= i %>
+                                                        </a>
+                                                    </li>
+                                                    <% } else { %>
+                                                        <li>
+                                                            <a href="?page=<%= i %><%=response.search_param%>">
+                                                                <%= i %>
+                                                            </a>
+                                                        </li>
+                                                        <% } %>
+                                                            <% if (i == Number(response.current) + 4 && i < response.pages) { %>
+                                                                <li class="disabled">
+                                                                    <a>...</a>
+                                                                </li>
+                                                                <% } %>
+                                                                    <% } %>
+                                                                        <% if (response.current == response.pages) { %>
+                                                                            <li class="disabled">
+                                                                                <a>
+                                                                                    <i class="fa fa-angle-right"></i>
+                                                                                </a>
+                                                                            </li>
+                                                                            <% } else { %>
+                                                                                <li>
+                                                                                    <a href="?page=<%= response.pages %><%=response.search_param%>">
+                                                                                        <i class="fa fa-angle-right"></i>
+                                                                                    </a>
+                                                                                </li>
+                                                                                <% } %>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <% } %>

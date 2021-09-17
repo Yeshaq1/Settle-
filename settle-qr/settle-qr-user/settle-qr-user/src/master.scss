@@ -1,0 +1,234 @@
+/* make the customizations */
+$theme-colors: (
+    "primary": #e44d26,
+    "secondary": #bdbdbd,
+    "darkDeep": #000000,
+    "success": #00df72,
+    "blue": #39f,
+    "deep-dark": #000,
+    "dark": #333333,
+    "dark1": #4f4f4f,
+    "dark2": #808080,
+);
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1440px,
+    xxxl: 1600px,
+) !default;
+/* import bootstrap to set changes */
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap");
+@import "~bootstrap/scss/bootstrap";
+@import "~material-design-icons/iconfont/material-icons";
+
+// $primary-color: #00a0c6;
+// $dark: #000;
+
+::-webkit-scrollbar {
+    width: 4px; /* width of the entire scrollbar */
+}
+::-webkit-scrollbar-track {
+    background: #eeeeee; /* color of the tracking area */
+}
+::-webkit-scrollbar-thumb {
+    background-color: #000000; /* color of the scroll thumb */
+    border-radius: 0px; /* roundness of the scroll thumb */
+    border: 0; /* creates padding around scroll thumb */
+}
+
+html {
+    scroll-behavior: smooth;
+    min-height: 100%;
+}
+body {
+    font-family: "Mulish", sans-serif;
+    font-size: 15px;
+}
+* {
+    outline: none !important;
+}
+
+a {
+    transition: ease 0.3s;
+    text-decoration: none !important;
+}
+button {
+    transition: ease 0.3s;
+}
+.bottom-0 {
+    bottom: 0;
+}
+.left-0 {
+    left: 0;
+}
+.top-0 {
+    top: 0;
+}
+.right-0 {
+    right: 0;
+}
+.form-control {
+    font-size: 12px;
+    outline: none !important;
+}
+
+canvas, iframe, img {
+    max-width: 100%;
+    vertical-align: middle;
+    height: auto;
+}
+
+.rounded-8 {
+    border-radius: 8px;
+}
+
+.hoverOrange {
+    &:hover {
+        background-color: #e44d26 !important;
+    }
+}
+
+.container {
+    max-width: 1024px;
+}
+
+header {
+    z-index: 100;
+}
+
+.heroBanner {
+    padding: 80px 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    // filter: blur(1px);
+    &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(3px);
+    }
+    h5{
+        position: relative;
+        z-index: 1;
+    }
+    .justify-content-around{
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.homeCoupleBtn {
+    background-color: #bdbdbd;
+    position: relative;
+    z-index: 1;
+    .btn {
+        border-radius: 4px;
+    }
+    .bg-secondary{
+        .w-50 {
+            &:first-child{
+                .btn{
+                    border-radius: 0;
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                }
+            }
+            &:last-child{
+                .btn{
+                    border-radius: 0;
+                    border-top-left-radius: 5px;
+                    border-bottom-left-radius: 5px;
+                }
+            }
+        }
+    }
+}
+
+.sideMenuWrap {
+    left: -250px;
+    top: 0;
+    width: 250px;
+    z-index: 102;
+    transition: ease 0.3s;
+    &.active {
+        left: 0;
+    }
+}
+.sideMenuWrapMask {
+    background-color: rgba(#000000, 0.7);
+    z-index: 101;
+    opacity: 0;
+    pointer-events: none;
+    transition: ease 0.3s;
+    &.active {
+        opacity: 1;
+        pointer-events: all;
+        cursor: pointer;
+    }
+}
+
+.contWidthStar {
+    .star-ratings {
+        display: block;
+        .star-container {
+            width: 60px;
+            text-align: center;
+            padding: 0 !important;
+            text-align: center;
+            &:nth-of-type(1) {
+                &::after {
+                    content: "Not good";
+                    font-size: 9px;
+                    display: block;
+                }
+            }
+            &:nth-of-type(2) {
+                &::after {
+                    content: "Edible";
+                    font-size: 9px;
+                    display: block;
+                }
+            }
+            &:nth-of-type(3) {
+                &::after {
+                    content: "Good";
+                    font-size: 9px;
+                    display: block;
+                }
+            }
+            &:nth-of-type(4) {
+                &::after {
+                    content: "Yummy";
+                    font-size: 9px;
+                    display: block;
+                }
+            }
+            &:nth-of-type(5) {
+                &::after {
+                    content: "Mouthwatering";
+                    font-size: 9px;
+                    display: block;
+                }
+            }
+            svg {
+                width: 30px !important;
+                height: 30px !important;
+            }
+        }
+    }
+}
+
+
+.foodPrintedMenu > div {
+    font-size: 0;
+}

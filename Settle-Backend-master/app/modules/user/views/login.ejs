@@ -1,0 +1,72 @@
+<% layout(layout_directory+'/loginLayout') -%>
+<!--Login Page Starts-->
+<section id="login">
+    <div class="container-fluid">
+        <div class="row full-height-vh">
+            <div class="col-12 d-flex align-items-center justify-content-center">
+                <div class="card gradient-indigo-purple width-400">
+                    <!--<div class="card-img overlap">
+                            <img alt="element 06" class="mb-1" src="/img/logo.png" width="190">
+                        </div>-->
+                    <div class="card-body" id="login-holder">
+                        <div class="card-block">
+                            <h2 class="white text-center">AllFive Admin Login</h2>
+                            <form action="<%= generateUrl('user.login.process')%>" method="post" novalidate>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <div class="controls">
+                                            <input type="email" class="form-control" name="email" id="email"
+                                                placeholder="Email" required
+                                                data-validation-required-message="This field is required"
+                                                data-validation-regex-regex="([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="controls col-md-12">
+                                        <input type="password" class="form-control" name="password" id="password"
+                                            placeholder="Password" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <button type="submit" class="btn btn-pink btn-block btn-raised">Submit</button>
+                                        <button type="button" class="btn btn-secondary btn-block btn-raised"
+                                            id="forgot-password-btn">Forgot password?</button>
+                                        <!-- <button onclick="document.getElementById('forg_pass').style.display='block';" type="button" class="btn btn-secondary btn-block btn-raised">Forgot password?</button> -->
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card-body" id="forgot-password-holder">
+                        <div class="card-block">
+                            <h2 class="white">Forgot Password</h2>
+                            <form action="<%= generateUrl('admin.user.forgotPassword')%>" method="post" novalidate>
+                                <div class="form-group">
+                                    <div class="col-md-12 controls">
+                                        <input type="email" class="form-control required" name="email_p_c"
+                                            id="email_p_c" placeholder="Enter Your Email" required
+                                            data-validation-required-message="This field is required"
+                                            data-validation-regex-regex="([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <button type="submit" class="btn btn-pink btn-block btn-raised">Send</button>
+                                        <button type="button" class="btn btn-secondary btn-block btn-raised"
+                                            id="login-btn">Login</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Login Page Ends-->

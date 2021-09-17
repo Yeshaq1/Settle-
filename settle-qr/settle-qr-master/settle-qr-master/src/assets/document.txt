@@ -1,0 +1,13 @@
+https://basecamp.com/2986350/projects/17598060
+
+
+[
+https://shathaalhothi936616.invisionapp.com/prototype/ckeu7cpt2001hm201l3my3zca/play
+username: webdevwdc@gmail.com
+password: Webskitters!1
+]
+
+[
+    Git :
+    https://gitlab.webskitters.com/react-projects/settle-qr
+]

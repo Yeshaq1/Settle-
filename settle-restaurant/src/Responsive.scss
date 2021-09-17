@@ -1,0 +1,264 @@
+@media (min-width: 1280px) {
+  .loginPageWrap .leftBox .logo {
+    position: absolute;
+    right: 15px;
+    top: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .loginPageWrap .leftBox .logo {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1600px) {
+  label {
+    font-size: 18px;
+    font-weight: 700 !important;
+  }
+  .btn-xl {
+    padding: 10px 30px;
+    font-size: 18px;
+  }
+  .loginPageWrap {
+    .leftBox {
+      width: 500px;
+      .logo {
+        img {
+          width: 50px;
+        }
+      }
+      .heading {
+        h1 {
+          font-size: 34px;
+        }
+        p {
+          font-size: 17px;
+        }
+      }
+    }
+    .rightBox {
+      width: calc(100% - 500px);
+    }
+  }
+
+  .dashboardMainWrap {
+    .leftBlock {
+      width: 250px;
+      ul {
+        li {
+          padding: 5px 0;
+          a {
+            font-size: 18px;
+            padding: 10px 25px;
+          }
+        }
+      }
+    }
+
+    .rightBlock {
+      width: calc(100% - 250px);
+      .pageHead {
+        padding: 30px 30px 0;
+        h1 {
+          font-size: 28px;
+          font-weight: 700;
+          margin-bottom: 20px;
+        }
+      }
+
+      .paymentStatusWrap {
+        padding: 0 30px;
+      }
+      .orderHistoryWrap {
+        .table {
+          // border-collapse: separate;
+          thead {
+            th {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+
+      .feedBackWrap {
+        .rateBox {
+          img {
+            width: 18px;
+          }
+        }
+      }
+
+      .QRGenaretarWrap {
+        img {
+          width: 350px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .loginPageWrap {
+    position: relative;
+    .leftBox {
+      z-index: 2;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      flex-direction: column;
+      padding: 0 15% !important;
+      .logo {
+        margin-bottom: -120px;
+        z-index: 2;
+        img {
+          width: 70px;
+        }
+      }
+      .logo + div {
+        padding: 30px;
+        padding-top: 130px;
+        backdrop-filter: blur(15px);
+        border-left: 2px solid #ffff;
+        border-top: 2px solid #ffffff;
+        box-shadow: 0 0 2rem rgba(#000, 0.3), 0 0 2rem rgba(#000, 0.3);
+        border-radius: 1rem;
+        background-color: rgba(#fff, 0.3);
+        margin: 0 !important;
+      }
+      .form-control {
+        width: 100%;
+      }
+    }
+    .rightBox {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    font-size: 12px;
+  }
+  .mobileNavWrap {
+    position: fixed;
+    background-color: #ffffff;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 5px 15px rgba(#101010, 0.1);
+    .logo {
+      img {
+        height: 50px;
+      }
+    }
+  }
+  .statusModal {
+    width: 250px;
+
+    table {
+      font-size: 11px;
+    }
+  }
+  label {
+    font-size: 16px;
+    font-weight: 700 !important;
+  }
+  .btn-xl {
+    padding: 8px 20px;
+    font-size: 16px;
+  }
+  .loginPageWrap {
+    .leftBox {
+      width: 100%;
+      .logo {
+        img {
+          width: 60px;
+        }
+      }
+      .heading {
+        h1 {
+          font-size: 22px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+    .rightBox {
+      display: none;
+    }
+  }
+
+  .dashboardMainWrap {
+    .leftBlock {
+      padding: 15px 0px;
+      z-index: 99;
+      position: fixed;
+      top: 67px;
+      left: -220px;
+      width: 220px;
+      transition: ease 0.3s;
+      height: calc(100vh - 67px);
+      background: linear-gradient(-45deg, #e25024, #dd2404);
+      &.active {
+        left: 0;
+        box-shadow: 10px 0 15px rgba(#101010, 0.2),
+          15px 0 250px rgba(#101010, 0.5);
+      }
+      ul {
+        li {
+          a {
+            font-size: 14px;
+            padding: 10px 15px;
+          }
+        }
+      }
+    }
+    .rightBlock {
+      width: 100%;
+      .pageHead {
+        padding: 15px 15px 0;
+        h1 {
+          font-size: 22px;
+          text-align: center;
+          margin-bottom: 15px;
+        }
+      }
+      .paymentStatusWrap {
+        padding: 0 15px;
+        .introWrap {
+          justify-content: center !important;
+          > div {
+            padding: 0 15px;
+          }
+          .colorBox {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto 7px;
+          }
+          span {
+            font-size: 14px;
+            font-weight: 800;
+            padding: 0;
+          }
+        }
+        .form-control {
+          width: 100%;
+        }
+      }
+
+      .QRGenaretarWrap {
+        img {
+          width: 200px;
+        }
+      }
+    }
+  }
+}

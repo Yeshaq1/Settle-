@@ -1,0 +1,104 @@
+<% layout(layout_directory+'/mainLayout') -%>
+
+<div class="kt-subheader   kt-grid__item" id="kt_subheader">
+    <div class="kt-subheader__main">
+        <h3 class="kt-subheader__title"> <%= page_title %> </h3>
+        <span class="kt-subheader__separator kt-subheader__separator--v"></span>
+        <!-- <div class="kt-subheader__breadcrumbs">
+            <a href="<%= generateUrl('user.dashboard') %>" class="kt-subheader__breadcrumbs-home">Dashboard</a>
+            <span class="kt-subheader__breadcrumbs-separator"></span>
+            <span class="kt-subheader__breadcrumbs-link kt-subheader__breadcrumbs-link--active"><%= page_title %></span>
+        </div> -->
+    </div>
+</div>
+
+<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
+    <div class="kt-portlet kt-portlet--mobile">
+        <!-- <div class="kt-portlet__head kt-portlet__head--lg">
+            <div class="kt-portlet__head-label">
+                <span class="kt-portlet__head-icon">
+                    <i class="kt-font-brand flaticon2-list-1"></i>
+                </span>
+                <h3 class="kt-portlet__head-title">
+                    <%= page_title %>
+                </h3>
+            </div>
+        </div> -->
+
+        <div class="kt-portlet__body">
+            <!-- <div class="kt-form kt-form--label-right kt-margin-t-20 kt-margin-b-10">
+                <div class="row align-items-center">
+                    <div class="col-xl-8 order-2 order-xl-1">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 kt-margin-b-20-tablet-and-mobile">
+                                <div class="kt-input-icon kt-input-icon--left">
+                                    <input type="text" class="form-control" placeholder="Search..." id="generalSearch">
+                                    <span class="kt-input-icon__icon kt-input-icon__icon--left">
+                                        <span><i class="la la-search"></i></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-4 kt-margin-b-20-tablet-and-mobile">
+                                <div class="kt-form__group kt-form__group--inline">
+                                    <div class="kt-form__label">
+                                        <label>Status:</label>
+                                    </div>
+                                    <div class="kt-form__control">
+                                        <select class="form-control bootstrap-select" id="kt_form_status">
+                                            <option value="">All</option>
+                                            <option value="Active">Active</option>
+                                            <option value="Inactive">Inactive</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="kt-form kt-form--label-align-right kt-margin-t-20 collapse" id="kt_datatable_group_action_form">
+                <div class="row align-items-center">
+                    <div class="col-xl-12">
+                        <div class="kt-form__group kt-form__group--inline">
+                            <div class="kt-form__label kt-form__label-no-wrap">
+                                <label class="kt-font-bold kt-font-danger-">Selected <span
+                                        id="kt_datatable_selected_number">0</span> records:</label>
+                            </div>
+                            <div class="kt-form__control">
+                                <div class="btn-toolbar">
+                                    <div class="dropdown">
+                                        <button type="button" class="btn btn-brand btn-sm dropdown-toggle"
+                                            data-toggle="dropdown">
+                                            Update status
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Active</a>
+                                            <a class="dropdown-item" href="#">Inactive</a>
+                                        </div>
+                                    </div>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <button class="btn btn-sm btn-danger" type="button"
+                                        id="kt_datatable_delete_all">Delete All</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="kt-portlet__body kt-portlet__body--fit">
+
+            <!--begin: Datatable -->
+            <div class="kt-datatable" id="settingRecordSelection"></div>
+
+            <!--end: Datatable -->
+        </div>
+    </div>
+</div>
+<script>
+    var fileref = document.createElement('script')
+    fileref.setAttribute("type", "text/javascript")
+    fileref.setAttribute("src",
+        "/assets/app/custom/general/crud/metronic-datatable/advanced/record-selection-setting.js");
+    document.getElementsByTagName("body")[0].appendChild(fileref);
+</script>

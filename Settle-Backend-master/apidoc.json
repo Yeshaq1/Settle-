@@ -1,0 +1,9 @@
+{
+    "name": "Settle API documentation",
+    "version": "1.0.0",
+    "description": "API Settle",
+    "url": "http://104.211.229.156:1468/api",
+    "template": {
+        "forceLanguage": "en"
+    }
+}

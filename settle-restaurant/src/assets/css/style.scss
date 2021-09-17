@@ -1,0 +1,197 @@
+// $primary: #e25024;
+$primary: #E76E4A;
+$secondary: #999999;
+$success: green;
+$info: #115ff2;
+$warning: #ffeb55;
+$danger: #ef0e0e;
+$light: #4d4d4d;
+$dark: #0a0a0a;
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+);
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl: 1600px,
+);
+
+// *************** Font Weight
+@for $fw from 1 through 10 {
+  .fw-#{$fw} {
+    font-weight: #{$fw * 100};
+  }
+}
+
+// ************ Font size  *************
+$fontSizeLastValue: 100;
+
+@for $fontSize from 0 through $fontSizeLastValue {
+  .fs-#{$fontSize} {
+    font-size: #{$fontSize / 16}rem !important;
+  }
+}
+
+@each $deviceName, $screenWidth in $grid-breakpoints {
+  @media (min-width: $screenWidth) {
+    @for $fontSize from 0 through $fontSizeLastValue {
+      .fs-#{$deviceName}-#{$fontSize} {
+        font-size: #{$fontSize / 16}rem !important;
+      }
+    }
+  }
+}
+
+// *********** width percentage ****************
+$widthInPercentageLastValue: 100;
+
+@for $widthPercent from 0 through $widthInPercentageLastValue {
+  .w-#{$widthPercent}-pct {
+    width: #{$widthPercent * 1%} !important;
+  }
+}
+
+@each $deviceName, $screenWidth in $grid-breakpoints {
+  @media (min-width: $screenWidth) {
+    @for $widthPercent from 0 through $widthInPercentageLastValue {
+      .w-#{$deviceName}-#{$widthPercent}-pct {
+        width: #{$widthPercent * 1%} !important;
+      }
+    }
+  }
+}
+
+// ************ width rem and px  **********************
+$widthInPixelLastValue: 100;
+
+@for $widthPixel from 0 through $widthInPixelLastValue {
+  .w-#{$widthPixel}px {
+    width: #{$widthPixel / 16}rem !important;
+  }
+}
+
+@each $deviceName, $screenWidth in $grid-breakpoints {
+  @media (min-width: $screenWidth) {
+    @for $widthPixel from 0 through $widthInPixelLastValue {
+      .w-#{$deviceName}-#{$widthPixel}px {
+        width: #{$widthPixel / 16}rem !important;
+      }
+    }
+  }
+}
+
+// ************ Padding  *************
+$paddingLastValue: 100;
+
+@for $pad from 0 through $paddingLastValue {
+  .p-#{$pad}px {
+    padding: #{$pad / 16}rem !important;
+  }
+
+  .pt-#{$pad}px {
+    padding-top: #{$pad / 16}rem !important;
+  }
+
+  .pb-#{$pad}px {
+    padding-bottom: #{$pad / 16}rem !important;
+  }
+
+  .pl-#{$pad}px {
+    padding-left: #{$pad / 16}rem !important;
+  }
+  .pr-#{$pad}px {
+    padding-right: #{$pad / 16}rem !important;
+  }
+  .px-#{$pad}px {
+    padding-left: #{$pad / 16}rem !important;
+    padding-right: #{$pad / 16}rem !important;
+  }
+  .py-#{$pad}px {
+    padding-top: #{$pad / 16}rem !important;
+    padding-bottom: #{$pad / 16}rem !important;
+  }
+}
+
+@each $deviceName, $screenWidth in $grid-breakpoints {
+  @media (min-width: $screenWidth) {
+    @for $pad from 0 through $paddingLastValue {
+      .p-#{$deviceName}-#{$pad}px {
+        padding: #{$pad / 16}rem !important;
+      }
+
+      .pt-#{$deviceName}-#{$pad}px {
+        padding-top: #{$pad / 16}rem !important;
+      }
+      .pb-#{$deviceName}-#{$pad}px {
+        padding-bottom: #{$pad / 16}rem !important;
+      }
+
+      .pl-#{$deviceName}-#{$pad}px {
+        padding-left: #{$pad / 16}rem !important;
+      }
+      .pr-#{$deviceName}-#{$pad}px {
+        padding-right: #{$pad / 16}rem !important;
+      }
+      .px-#{$deviceName}-#{$pad}px {
+        padding-right: #{$pad / 16}rem !important;
+        padding-left: #{$pad / 16}rem !important;
+      }
+      .py-#{$deviceName}-#{$pad}px {
+        padding-top: #{$pad / 16}rem !important;
+        padding-bottom: #{$pad / 16}rem !important;
+      }
+    }
+  }
+}
+
+// ************ Marging  *************
+$marginLastValue: 100;
+
+@for $pad from 0 through $marginLastValue {
+  .m-#{$pad}px {
+    margin: #{$pad / 16}rem !important;
+  }
+
+  .mt-#{$pad}px {
+    margin-top: #{$pad / 16}rem !important;
+  }
+
+  .mb-#{$pad}px {
+    margin-bottom: #{$pad / 16}rem !important;
+  }
+  .ml-#{$pad}px {
+    margin-left: #{$pad / 16}rem !important;
+  }
+}
+
+@each $deviceName, $screenWidth in $grid-breakpoints {
+  @media (min-width: $screenWidth) {
+    @for $pad from 0 through $marginLastValue {
+      .m-#{$deviceName}-#{$pad}px {
+        margin: #{$pad / 16}rem !important;
+      }
+
+      .mt-#{$deviceName}-#{$pad}px {
+        margin-top: #{$pad / 16}rem !important;
+      }
+
+      .mb-#{$deviceName}-#{$pad}px {
+        margin-bottom: #{$pad / 16}rem !important;
+      }
+      .ml-#{$deviceName}-#{$pad}px {
+        margin-left: #{$pad / 16}rem !important;
+      }
+    }
+  }
+}

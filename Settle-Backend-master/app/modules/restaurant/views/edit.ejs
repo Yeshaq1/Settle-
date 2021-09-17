@@ -1,0 +1,91 @@
+<% layout(layout_directory+'/mainLayout') -%>
+
+    <div class="kt-subheader   kt-grid__item" id="kt_subheader">
+        <div class="kt-subheader__main">
+            <h3 class="kt-subheader__title">
+                <%= page_title %>
+            </h3>
+            <span class="kt-subheader__separator kt-subheader__separator--v"></span>
+            <div class="kt-subheader__breadcrumbs">
+                <!-- <a href="<%= generateUrl('user.dashboard') %>" class="kt-subheader__breadcrumbs-home">Dashboard</a>
+                <span class="kt-subheader__breadcrumbs-separator"></span>
+                <span class="kt-subheader__breadcrumbs-link kt-subheader__breadcrumbs-link--active">
+                    <%= page_title %>
+                </span> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="kt-portlet">
+                    <form class="kt-form kt-form--label-right" id="frmEditRestaurant" action="<%= generateUrl('restaurant.update') %>" method="POST"
+                        enctype='multipart/form-data'>
+          
+                        <div class="kt-portlet__body">
+                            <div class="form-group row">
+                                <div class="col-lg-6">
+                                    <label>Restaurant Name</label>
+                                    <input type="text" name="restaurant_name" value="<%= response.restaurant_name %>"  id="restaurant_name" class="form-control" data-validation-required-message="This field is required">
+                                </div>
+                                <div class="col-lg-6">
+                                    <label>Restaurant Email</label>
+                                    <input type="text" name="email"  id="email" value="<%= response.email %>" class="form-control" data-validation-required-message="This field is required">
+                                    
+                                </div>
+                            </div>
+                          
+                            <div class="form-group row">
+                                <div class="col-lg-6">
+                                    <label>Restaurant photos:</label>
+                                    <input type="file" name="restaurant_photos" id="restaurant_photos" multiple class="form-control imagepicker" accept="image/*">
+                                </div>
+                                <div class="col-lg-12" style="margin: 10px 0px">
+                                    <%if(response.restaurant_photos.length > 0){%>
+                                        <% response.restaurant_photos.map(function(data){ %>
+                                            <div class="form-group displayinline">
+                                            <img src="/uploads/restaurant/thumb/<%=data%>" height="100" width="100" alt="Image File Not Found">
+                                            <a class="onHover curserpointer clickBanner" id="<%=data%>">X</a>
+                                            <input type="hidden" value="<%=response._id%>" class="restaurantId">
+                                        </div>
+                                       <% }) %>
+                                        
+                                        <%} else {%>
+                                            <label>No image found</label>
+                                            <%}%>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-6">
+                                    <label>Restaurant menu upload (PDF):</label>
+                                    <input type="file" name="restaurant_menu_pdf" id="restaurant_menu_pdf"  class="form-control imagepicker" accept="application/pdf, application/vnd.ms-excel">
+                                </div>
+                                <div class="col-lg-6">
+                                    <label>&nbsp;</label>
+                                    <div style="display: inherit;">
+                                    <% if(response.restaurant_menu_pdf && response.restaurant_menu_pdf!="") {%>
+                                   <a target="_blank" href="/uploads/restaurant/<%=response.restaurant_menu_pdf%>">View Pdf</a>
+                                    <% }else{ %>
+                                        No File
+                                        <%}%>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kt-portlet__foot">
+                            <div class="kt-form__actions">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <input type="hidden" name="pid" value="<%= response._id%>">
+                                        <button type="submit" class="btn btn-primary">Update</button>
+                                        <a href="<%= generateUrl('restaurant.list') %>" class="btn btn-secondary">Cancel</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
